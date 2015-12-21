@@ -28,10 +28,6 @@ bitfactory.make({ //routes
         "toshi-notifier.min.js": ["header", function(cb) {
             fs.writeFileSync('toshi-notifier.min.js', header + UglifyJS.minify('toshi-notifier.js').code);
             cb();
-        }],
-        "cli.min.js": ["header", function(cb) {
-            fs.writeFileSync('cli.min.js', header + UglifyJS.minify('cli.js').code);
-            cb();
         }]
     }
 });
