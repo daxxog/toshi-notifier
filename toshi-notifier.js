@@ -121,7 +121,7 @@
                         });
                     }
                     
-                    if(notification.fetched === 'latest_block') {
+                    if(notification.fetched === 'blocks') {
                         that.client.keys(that.getDB('transactions', '*'), function(err, data) {
                             if(!err) {
                                 if(data.length > 0) {
